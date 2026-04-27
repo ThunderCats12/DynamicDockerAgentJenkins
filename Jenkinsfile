@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent none
     stages {
         stage('Parallel dynamic agents') {
             parallel {
@@ -7,6 +7,7 @@ pipeline {
                     agent {
                         docker {
                             image 'python:3.11-slim'
+                            label 'docker-agent'
                             args  '-u cyber'
                             reuseNode true
                         }
@@ -21,6 +22,7 @@ pipeline {
                     agent {
                         docker {
                             image 'node:20-slim'
+                            label 'docker-agent'
                             args  '-u cyber'
                             reuseNode true
                         }
