@@ -7,7 +7,7 @@ pipeline {
                     agent {
                         docker {
                             image 'python:3.11-slim'
-                            args  '-u root'
+                            args  '-u cyber'
                             reuseNode true
                         }
                     }
@@ -21,7 +21,7 @@ pipeline {
                     agent {
                         docker {
                             image 'node:20-slim'
-                            args  '-u root'
+                            args  '-u cyber'
                             reuseNode true
                         }
                     }
