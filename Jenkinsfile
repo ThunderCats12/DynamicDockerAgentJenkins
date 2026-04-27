@@ -8,7 +8,6 @@ pipeline {
                     agent {
                         docker {
                             image 'python:3.11-slim'
-                            label 'docker-agent'
                             args  '-u root'
                         }
                     }
@@ -22,7 +21,6 @@ pipeline {
                     agent {
                         docker {
                             image 'node:20-slim'
-                            label 'docker-agent'
                             args  '-u root'
                         }
                     }
