@@ -20,7 +20,7 @@ services:
             - jenkins
         environment:
             SSH_USERNAME: jenkins
-            SSH_USERPASS: jenkins
+            SSH_USERPASS: 1
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock    
     worker2:
@@ -32,7 +32,7 @@ services:
             - jenkins
         environment:
             SSH_USERNAME: jenkins
-            SSH_USERPASS: jenkins
+            SSH_USERPASS: 1
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock   
 networks:
